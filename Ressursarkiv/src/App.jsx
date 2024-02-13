@@ -10,7 +10,8 @@ function App() {
 
   return (
     <>
-
+    <nav></nav>
+    <main></main>
     <h1>Hei</h1>
 
     </>
