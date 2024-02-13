@@ -1,5 +1,34 @@
-h1 {
-  color: pink;
+nav {
+  font-weight: 700;
+  font-size: 1rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+nav ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+nav li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem 0;
+  height: 2rem;
+}
+nav a {
+  background-color: var(--dark); /*SJEKK OPP VARIABLENES SYNTAX I SASS*/
+  color: var(--white);
+  text-decoration: none;
+  text-align: center;
+  padding: 1rem;
+  width: 300px;
+}
+nav a:hover {
+  background-color: var(--white);
+  color: var(--dark);
 }
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNhc3MvbWFpbi5zY3NzIiwibWFpbi5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBRUE7RUFDSSxXQUFBO0FDREoiLCJmaWxlIjoibWFpbi5jc3MifQ== */
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNhc3MvbWFpbi5zY3NzIiwibWFpbi5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBRUE7RUFDSSxnQkFBQTtFQUNBLGVBQUE7RUFDQSxXQUFBO0VBQ0EsbUJBQUE7QUNESjtBREdJO0VBQ0ksYUFBQTtFQUNBLHNCQUFBO0VBQ0EsZ0JBQUE7RUFDQSxVQUFBO0VBQ0EsU0FBQTtBQ0RSO0FER0k7RUFDSSxhQUFBO0VBQ0EsdUJBQUE7RUFDQSxtQkFBQTtFQUNBLGdCQUFBO0VBQ0EsWUFBQTtBQ0RSO0FESUk7RUFDSSw2QkFBQSxFQUFBLHNDQUFBO0VBQ0EsbUJBQUE7RUFDQSxxQkFBQTtFQUNBLGtCQUFBO0VBQ0EsYUFBQTtFQUNBLFlBQUE7QUNGUjtBREtRO0VBQ0ksOEJBQUE7RUFDQSxrQkFBQTtBQ0haIiwiZmlsZSI6Im1haW4uY3NzIn0= */

@@ -28,7 +28,8 @@ body{
     background-color: var(--white);
     color: var(--dark);
 }
-nav{
+
+/*nav{
     font-weight: 700;
     font-size: 1rem;
     width: 100%;
@@ -63,7 +64,7 @@ nav ul li a{
 nav ul li a:hover{
     background-color: var(--white);
     color: var(--dark);
-}
+}*/
 
 
 main{
