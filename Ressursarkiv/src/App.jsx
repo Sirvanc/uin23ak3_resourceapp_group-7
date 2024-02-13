@@ -3,7 +3,10 @@ import './App.css'
 import './css/main.css'
 
 function App() {
+<<<<<<< HEAD
   const [count, setCount] = useState(0)
+=======
+>>>>>>> Layout
 
   return (
     <>
