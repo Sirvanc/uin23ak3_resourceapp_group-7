@@ -1,14 +1,13 @@
-import { useState } from 'react'
-import Nav from './components/Nav'
-import Main from './components/Main'
+import Layout from "./components/Layout"
+
 
 
 function App() {
 
   return (
     <>
-      <Nav />
-      <Main />    
+      <Layout />
+
     </>
   )
 }

@@ -1,12 +1,13 @@
-import React from 'react'
+import Main from "./Main"
+import Nav from "./Nav"
 
-const  Layout = ()=>{
+export default function Layout({}) {
     return (
-        <div>
-            {/*HTML - koden fra arbeids krav 2*/}
-        </div>
+    <>    
+      <Nav />
 
-    );
+      <Main />    
+      
+    </>
+    )
 }
-
-export default Layout;
