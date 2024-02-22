@@ -16,7 +16,7 @@ resources.forEach(category => {
 return (
     <> 
         <ul>
-            {uniqueTags.map(tag => <li key={tag}><a href={`#${tag}`}>{tag}</a></li>)}      
+            {uniqueTags.map(tag => <button key={tag}><a href={`#${tag}`}>{tag}</a></button>)}      
         </ul>
     </>
     );
