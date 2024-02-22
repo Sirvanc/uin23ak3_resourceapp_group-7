@@ -1,8 +1,12 @@
+import React from "react"
+
 export default function Main() {
     return (
-       <>
-       <h2>Main</h2>
-       
-       </>
-    )
+        <div className="reourceBody">
+            <h1> Ressursarkiv</h1>
+            <p> </p>
+        </div>
+    
+    );
 }
+export default Main;
