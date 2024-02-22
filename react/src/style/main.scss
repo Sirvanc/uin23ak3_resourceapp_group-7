@@ -14,3 +14,9 @@ body {
 	margin-top: 0;
 	padding-top: 0;
 }
+
+nav {
+	:active {
+		background-color: $lightblue;
+	}
+}
