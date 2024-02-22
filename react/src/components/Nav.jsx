@@ -4,10 +4,7 @@ import {resources} from "../assets/ressurser.js"
 
 export default function Nav() {
 
-const navCategory = resources.filter(category => category.category)
-
-const [activeTag, setActiveTag] = useState(0)
-
+const [activeTag, setActiveTag] = useState(null)
 
 const uniqueTags = [];
 resources.forEach(category => {
