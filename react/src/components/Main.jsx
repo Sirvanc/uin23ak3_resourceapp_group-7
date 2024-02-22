@@ -1,10 +1,8 @@
-import React from "react"
-
-export default function Main() {
+import React from "react";
+function Main() {
     return (
-        <div className="reourceBody">
-            <h1> Ressursarkiv</h1>
-            <p> </p>
+        <div className='ressouceBody'>
+            <h1>Ressursarkiv </h1>
         </div>
     
     );
