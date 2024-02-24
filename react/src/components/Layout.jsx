@@ -1,14 +1,14 @@
-import React, { useState } from "react";
-import Main from "./Main";
-import Nav from "./Nav";
+import React from 'react';
+import Nav from './Nav';
 
-export default function Layout() {
-  const [activeTag, setActiveTag] = useState("html");
 
+export default function Layout({ children }) {
   return (
-    <>
-      <Nav activeTag={activeTag} setActiveTag={setActiveTag} />
-      <Main activeTab={activeTag} />
+    <>    
+      <Nav />
+      {children}
+      
     </>
   );
 }
+

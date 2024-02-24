@@ -1,11 +1,24 @@
+// Main.js
 import React from "react";
+import { resources } from "../assets/ressurser.js";
 
-export default function Main(props) {
-  const { activeTab } = props;
-  const uppercaseActiveTab = activeTab.toUpperCase();
-  return (
-    <>
-      <h1>{uppercaseActiveTab}</h1>
-    </>
-  );
+export default function Main({ category }) {
+    const filteredResources = resources.filter(
+    (resource) => resource.category === category
+    );
+
+    return (
+    <div id="root">
+        <h2>{category.toUpperCase()}</h2>
+        <ul>
+        {filteredResources.map((resource, index) => (
+            <li key={index}>
+            <a href={resource.url} target="_blank" rel="noopener noreferrer">
+                {resource.title}
+            </a>
+            </li>
+        ))}
+        </ul>
+    </div>
+    );
 }
