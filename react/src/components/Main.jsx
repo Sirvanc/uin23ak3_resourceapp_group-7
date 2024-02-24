@@ -1,4 +1,4 @@
-// Main.js
+
 import React from "react";
 import { resources } from "../assets/ressurser.js";
 
