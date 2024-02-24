@@ -8,7 +8,7 @@ export default function Main({ category }) {
     );
 
     return (
-    <div id="root">
+    <div>
         <h2>{category.toUpperCase()}</h2>
         <ul>
         {filteredResources.map((resource, index) => (
