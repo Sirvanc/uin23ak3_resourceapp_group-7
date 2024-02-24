@@ -1,19 +1,24 @@
+// Main.js
 import React from "react";
+import { resources } from "../assets/ressurser.js";
 
-export default function Main() {
+export default function Main({ category }) {
+    const filteredResources = resources.filter(
+    (resource) => resource.category === category
+    );
+
     return (
-        <div className='ressouceBody'>
-            <h2>Ressursarkiv </h2>
-            <nav>
+    <div id="root">
+        <h2>{category.toUpperCase()}</h2>
         <ul>
-        <li><a href="/html">HTML</a></li>
-        <li><a href="/css">CSS</a></li>
-        <li><a href="/javascript">JavaScript</a></li>
-        <li><a href="/react">React</a></li>
-        <li><a href="/sanity">Sanity</a></li>
+        {filteredResources.map((resource, index) => (
+            <li key={index}>
+            <a href={resource.url} target="_blank" rel="noopener noreferrer">
+                {resource.title}
+            </a>
+            </li>
+        ))}
         </ul>
-    </nav>
-        </div>
-    
+    </div>
     );
 }
