@@ -1,6 +1,8 @@
-import React from "react";
-import { useState } from "react";
+// Nav.js
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { resources } from "../assets/ressurser.js";
+
 
 export default function Nav() {
   const [activeTag, setActiveTag] = useState(null);
@@ -20,7 +22,9 @@ export default function Nav() {
           className={activeTag === tag ? "active" : ""}
           onClick={() => setActiveTag(tag)}
         >
-          <a href={`#${tag}`}>{tag}</a>
+          <Link to={`/${tag}`} style={{ textTransform: 'uppercase' }}>
+            {tag.toUpperCase()}
+          </Link>
         </button>
       ))}
     </ul>

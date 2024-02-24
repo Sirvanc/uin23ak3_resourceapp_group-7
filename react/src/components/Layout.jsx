@@ -1,13 +1,14 @@
-import Main from "./Main"
-import Nav from "./Nav"
+import React from 'react';
+import Nav from './Nav';
 
-export default function Layout({}) {
-    return (
+
+export default function Layout({ children }) {
+  return (
     <>    
       <Nav />
-
-      <Main />    
+      {children}
       
     </>
-    )
+  );
 }
+
