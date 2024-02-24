@@ -1,14 +1,18 @@
-// styles.scss
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
 
+$dark: #2A324B;
+$light: #58699D;
+$grey: #E1E5EE;
+$white: #fff;
+$font: 'Montserrat', sans-serif;
 
-    $--dark: #2A324B;
-    $--light: #58699D;
-    $--grey: #E1E5EE;
-    $--white: #fff;
-	$--font: 'Montserrat', sans-serif;
-
+:root {
+    --dark: #{$dark};
+    --light: #{$light};
+    --grey: #{$grey};
+    --white: #{$white};
+    --font: #{$font};
+}
 
 body {
     display: grid;
@@ -25,6 +29,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+	background-color: var(--grey);
 }
 
 .active {
@@ -32,11 +37,74 @@ body {
     color: var(--dark);
 }
 
-ul {
-	font-weight: 700;
+nav {
+    font-weight: 700;
     font-size: 1rem;
     width: 100%;
     margin-bottom: 1rem;
-	
+    ul {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: .5rem 0;
+            height: 2rem;
+            a {
+                background-color:  #fff;
+                color: var(--white);
+                text-decoration: none;
+                text-align: center;
+                padding: 1rem;
+                width: 300px;
+                &:hover {
+                    background-color: #2A324B;
+                    color: var(--dark);
+                }
+            }
+        }
+    }
 }
 
+main {
+    background-color: var(--white);
+    height: 550px;
+    width: 100%;
+    margin-top: .5rem;
+    article {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 1000px;
+        padding: 4rem;
+        box-sizing: border-box;
+        ul {
+            margin-top: 0;
+        }
+    }
+}
+
+@media only screen and (min-width: 1245px) {
+    nav ul {
+        flex-direction: row;
+        justify-content: space-between;
+        li {
+            flex-wrap: wrap;
+            flex-direction: row;
+            a {
+                padding: 1.5rem 4.9rem;
+                font-size: 1rem;
+                width: auto;
+            }
+        }
+    }
+
+    main {
+        width: 1245px;
+        min-height: 400px;
+    }
+}
