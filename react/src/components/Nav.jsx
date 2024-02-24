@@ -15,6 +15,7 @@ export default function Nav() {
   });
 
   return (
+  
     <ul>
       {uniqueTags.map((tag) => (
         <button
@@ -27,6 +28,7 @@ export default function Nav() {
           </Link>
         </button>
       ))}
-    </ul>
+      </ul>
+  
   );
 }
