@@ -1,19 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
-
+// Variables for colors, fonts, etc.
 $dark: #2A324B;
 $light: #58699D;
 $grey: #E1E5EE;
 $white: #fff;
 $font: 'Montserrat', sans-serif;
 
-:root {
-    --dark: #{$dark};
-    --light: #{$light};
-    --grey: #{$grey};
-    --white: #{$white};
-    --font: #{$font};
-}
-
+// General body styling
 body {
     display: grid;
     place-items: center;
@@ -24,6 +17,7 @@ body {
     font-family: #{$font};
 }
 
+// Styles for the tab container
 #container {
     display: flex;
     flex-direction: column;
