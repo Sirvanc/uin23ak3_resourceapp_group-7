@@ -11,7 +11,7 @@ body {
     display: grid;
     place-items: center;
     height: 100vh;
-    margin: 0 2rem;
+    margin: 0 1rem;
     padding: 1;
     background-color: #{$grey};
     font-family: #{$font};
@@ -37,14 +37,15 @@ nav {
     font-weight: 700;
     font-size: 2rem;
     width: 100%;
-    margin-bottom: 1rem;
+    margin-top: .1rem;
     justify-content: space-between;
 }
 
 .nav-button {
     background-color: #2A324B;
-    padding: 10px 20px;
-    margin: 20px;
+    padding: 10px 30px;
+    margin: 1px;
+    margin-top: 0;
     border-radius: 1px;
     transition: background-color 0.3s ease;
     color: #ffffff; // Tekstfarge for knappene
@@ -53,13 +54,14 @@ nav {
 }
 
 .nav-button:hover {
-    background-color: #fcfcfc;
-    color: #2A324B; // Endrer tekstfargen ved hover for bedre kontrast
+    background-color: #ffffff;
+    color: #fefefe; // Endrer tekstfargen ved hover for bedre kontrast
+    border-color: #E1E5EE;
 }
 
 .nav-button.active {
     background-color: #fefefe;
-    color: #2A324B; // Endrer tekstfargen for aktiv knapp for bedre synlighet
+    color: #fdfdfd; // Endrer tekstfargen for aktiv knapp for bedre synlighet
 }
 
 
