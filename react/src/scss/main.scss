@@ -23,17 +23,15 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-	background-color: #ffffff
+	background-color: #ffffff // Bakgrunnsfarge for navigasjonsbeholderen
 }
 
 nav {
-    display: block;
-    font-weight: 700;
-    font-size: 1rem;
+    display: flex; // Endret til flex for å dra nytte av flexbox-egenskaper
+    font-weight: 900;
+    font-size: 1.5rem;
     width: 100%;
-    margin-bottom: 1rem;
-
-
+    margin-bottom: 2rem;
 }
 
 .nav-button {
@@ -42,15 +40,20 @@ nav {
     margin: 20px;
     border-radius: 1px;
     transition: background-color 0.3s ease;
-}
-.nav-button:hover {
-    background-color: #fcfcfc;
-}
-.nav-button.active {
-    background-color: #fefefe;
-    color: $white;
+    color: #ffffff; // Tekstfarge for knappene
+    text-decoration: none; // Fjerner understrek fra lenker
+    cursor: pointer; // Endrer musepeker til hånd når den svever over knappen
 }
 
+.nav-button:hover {
+    background-color: #fcfcfc;
+    color: #2A324B; // Endrer tekstfargen ved hover for bedre kontrast
+}
+
+.nav-button.active {
+    background-color: #fefefe;
+    color: #2A324B; // Endrer tekstfargen for aktiv knapp for bedre synlighet
+}
 
 
 
