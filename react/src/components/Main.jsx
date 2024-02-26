@@ -8,7 +8,7 @@ export default function Main({ category }) {
     );
 
     return (
-    <article>
+    
     <div>
         <h2>{category.toUpperCase()}</h2>
         <ul>
@@ -21,6 +21,5 @@ export default function Main({ category }) {
         ))}
         </ul>
     </div>
-    </article>
     );
 }
