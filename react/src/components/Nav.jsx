@@ -15,7 +15,7 @@ export default function Nav() {
   });
 
   return (
-  <nav className="nav-container">
+  <nav className="nav">
     <ul>
       {uniqueTags.map((tag) => (
         <button
