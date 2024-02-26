@@ -15,12 +15,12 @@ export default function Nav() {
   });
 
   return (
-  <nav className="#container">
+  <nav className="nav-container">
     <ul>
       {uniqueTags.map((tag) => (
         <button
           key={tag}
-          className={activeTag === tag ? "active" : ""}
+          className={activeTag === tag ? "nav-button active" : "nav-button"}
           onClick={() => setActiveTag(tag)}
         >
           <Link to={`/${tag}`} style={{ textTransform: 'uppercase' }}>
