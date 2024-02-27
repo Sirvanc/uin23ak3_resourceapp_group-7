@@ -1,13 +1,11 @@
-import Main from "./Main"
-import Nav from "./Nav"
+import Main from "./Main";
+import Nav from "./Nav";
 
 export default function Layout({}) {
-    return (
-    <>    
+  return (
+    <>
       <Nav />
-
-      <Main />    
-      
+      <Main />
     </>
-    )
+  );
 }
