@@ -1,10 +1,10 @@
 import React from "react";
 
-export default function Main({ activeTag }) {
+export default function Main(props) {
   return (
     <>
       <h1>Ressursarkiv </h1>
-      {activeTag && <p>Active tag: {activeTag}</p>}
+      <p>vdfoiv{props.activeTag}</p>
     </>
   );
 }
