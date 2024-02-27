@@ -1,11 +1,9 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { resources } from "../assets/ressurser.js";
 
-export default function Nav() {
-  const [activeTag, setActiveTag] = useState("html");
-
+export default function Nav({ activeTag, setActiveTag }) {
   const uniqueTags = [];
+
   resources.forEach((category) => {
     if (uniqueTags.indexOf(category.category) === -1) {
       uniqueTags.push(category.category);
@@ -13,16 +11,18 @@ export default function Nav() {
   });
 
   return (
-    <ul>
-      {uniqueTags.map((tag) => (
-        <button
-          key={tag}
-          className={activeTag === tag ? "active" : ""}
-          onClick={() => setActiveTag(tag)}
-        >
-          <p>{tag}</p>
-        </button>
-      ))}
-    </ul>
+    <>
+      <ul>
+        {uniqueTags.map((tag) => (
+          <button
+            key={tag}
+            className={activeTag === tag ? "active" : ""}
+            onClick={() => setActiveTag(tag)}
+          >
+            <p>{tag.toUpperCase()}</p>
+          </button>
+        ))}
+      </ul>
+    </>
   );
 }
