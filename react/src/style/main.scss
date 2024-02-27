@@ -1,3 +1,4 @@
+
 	$grayblue: #2A324B;
 	$lightblue: #58699D;
 	$lightblue: #E1E5EE;
@@ -12,4 +13,12 @@ body {
 	background-color: $background-color_1;
 	margin-top: 0;
 	padding-top: 0;
+}
+
+nav {
+
+	
+	:active {
+		background-color: $lightblue;
+	}
 }
