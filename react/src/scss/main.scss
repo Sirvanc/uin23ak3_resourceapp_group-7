@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+// Variables for colors, fonts, etc.
+$dark: #2A324B;
+$light: #58699D;
+$grey: #E1E5EE;
+$white: #fff;
+$font: 'Montserrat', sans-serif;
+
+// General body styling
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    margin: 0 1rem;
+    padding: 1;
+    background-color: #{$grey};
+    font-family: #{$font};
+}
+main {
+    background-color: #{$white};
+    height: 550px;
+    width: 100%;
+    margin-top: .1rem;
+    
+    div {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 1000px;
+        padding: 5rem;
+        box-sizing: border-box;
+
+    }
+}
+
+nav {
+    display: flex; // Endret til flex for å dra nytte av flexbox-egenskaper
+    font-weight: 700;
+    font-size: 2rem;
+    width: 100%;
+    margin-top: .1rem;
+    justify-content: space-between;
+}
+
+.nav-button {
+    background-color: #2A324B;
+    padding: 10px 30px;
+    margin: 1px;
+    margin-top: 0;
+    border-radius: 1px;
+    transition: background-color 0.3s ease;
+    color: #ffffff; // Tekstfarge for knappene
+    text-decoration: none; // Fjerner understrek fra lenker
+    cursor: pointer; // Endrer musepeker til hånd når den svever over knappen
+
+    &:hover {
+        background-color: #ffffff;
+        color: #fefefe; // Endrer tekstfargen ved hover for bedre kontrast
+        border-color: #E1E5EE;
+    }
+
+
+    &.active {
+        background-color: #fefefe;
+        color: #fdfdfd; // Endrer tekstfargen for aktiv knapp for bedre synlighet
+    }
+}
+
+
+
+
+
