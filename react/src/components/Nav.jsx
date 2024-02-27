@@ -1,8 +1,6 @@
-// Nav.js
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { resources } from "../assets/ressurser.js";
-
 
 export default function Nav() {
   const [activeTag, setActiveTag] = useState(null);
@@ -15,20 +13,20 @@ export default function Nav() {
   });
 
   return (
-  <nav className="nav">
-    <ul>
-      {uniqueTags.map((tag) => (
-        <button
-          key={tag}
-          className={activeTag === tag ? "nav-button active" : "nav-button"}
-          onClick={() => setActiveTag(tag)}
-        >
-          <Link to={`/${tag}`} style={{ textTransform: 'uppercase' }}>
-            {tag.toUpperCase()}
-          </Link>
-        </button>
-      ))}
+    <nav className="nav">
+      <ul>
+        {uniqueTags.map((tag) => (
+          <button
+            key={tag}
+            className={activeTag === tag ? "nav-button active" : "nav-button"}
+            onClick={() => setActiveTag(tag)}
+          >
+            <Link to={`/${tag}`} style={{ textTransform: "uppercase" }}>
+              {tag.toUpperCase()}
+            </Link>
+          </button>
+        ))}
       </ul>
-  </nav>
+    </nav>
   );
 }
