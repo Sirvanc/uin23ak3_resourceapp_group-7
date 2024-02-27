@@ -1,35 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Routes, Route } from "react-router-dom"
+import Layout from "./components/Layout"
+import Main from "./components/Main"
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <Layout>
+      <Routes>
+        <Route path=":slug" element = "" />
+        <Route path=""/>
+      </Routes>
+    </Layout>
   )
 }
 
 export default App
+
+/*Sett opp Routing til sidene /html, /css, /javascript, /react og /sanity, 
+hvor hver av disse router til componenten "Resouces", 
+og sender med en prop til "Resources" med riktig ressurskategori ( eks: category={"html"} ). 
+Bruk prop-en "category" og moderne javascript for å liste opp riktige ressurser fra ressurser.js.*/
