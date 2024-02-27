@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { resources } from "../assets/ressurser.js";
+export { uniqueTags } from "../assets/ressurser.js";
 
 export default function Nav() {
   const [activeTag, setActiveTag] = useState(null);
