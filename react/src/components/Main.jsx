@@ -1,10 +1,11 @@
 import React from "react";
 
 export default function Main(props) {
+  const { activeTab } = props;
+  const uppercaseActiveTab = activeTab.toUpperCase();
   return (
     <>
-      <h1>Ressursarkiv </h1>
-      <p>vdfoiv{props.activeTag}</p>
+      <h1>{uppercaseActiveTab}</h1>
     </>
   );
 }
