@@ -8,8 +8,10 @@ export default function Layout({}) {
   return (
     <>
       <Nav />
+      <Main/>
 
-      <Main />
+
+      
       </>
   )
 }
