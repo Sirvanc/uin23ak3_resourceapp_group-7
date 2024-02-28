@@ -3,70 +3,114 @@
 $dark: #2A324B;
 $light: #58699D;
 $grey: #E1E5EE;
-$white: #fff;
+$white: #ffffff;
 $font: 'Montserrat', sans-serif;
 
 // General body styling
-body {
+body{
     display: grid;
     place-items: center;
     height: 100vh;
     margin: 0 1rem;
-    padding: 1;
-    background-color: #{$grey};
-    font-family: #{$font};
+    padding: 0;
+    background-color: #E1E5EE;
+    font-family: 'Montserrat', sans-serif;
 }
-main {
-    background-color: #{$white};
+
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.active{
+    background-color: #ffffff;;
+    color: $dark;
+}
+nav{
+    display: block;
+    font-weight: 700;
+    font-size: 1rem;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0 ;
+    margin: 0;
+}
+
+nav ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .5rem 0;
+    height: 2rem;
+}
+
+nav ul li a{
+    background-color: #2A324B;
+    color: #ffffff;;
+    text-decoration: none;
+    text-align: center;
+    padding: 1rem;
+    width: 300px;
+}
+
+nav ul li a:hover{
+    background-color: #ffffff;
+    color: $dark;
+}
+
+
+main{
+    background-color: $white;
     height: 550px;
     width: 100%;
-    margin-top: .1rem;
-    
-    div {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        max-width: 1000px;
-        padding: 5rem;
-        box-sizing: border-box;
-
-    }
+    margin-top: .5rem;
 }
 
-nav {
-    display: flex; // Endret til flex for å dra nytte av flexbox-egenskaper
-    font-weight: 700;
-    font-size: 2rem;
+main article{
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    margin-top: .1rem;
-    justify-content: space-between;
+    max-width: 1000px;
+    padding: 4rem;
+    box-sizing: border-box;
 }
 
-.nav-button {
-    background-color: #2A324B;
-    padding: 10px 30px;
-    margin: 1px;
+main article ul{
     margin-top: 0;
-    border-radius: 1px;
-    transition: background-color 0.3s ease;
-    color: #ffffff; // Tekstfarge for knappene
-    text-decoration: none; // Fjerner understrek fra lenker
-    cursor: pointer; // Endrer musepeker til hånd når den svever over knappen
+}   
 
-    &:hover {
-        background-color: #ffffff;
-        color: #fefefe; // Endrer tekstfargen ved hover for bedre kontrast
-        border-color: #E1E5EE;
+
+@media only screen and (min-width: 1245px)
+{
+    
+
+    nav ul{
+        flex-direction: row;
+        justify-content: space-between;
     }
 
-
-    &.active {
-        background-color: #fefefe;
-        color: #fdfdfd; // Endrer tekstfargen for aktiv knapp for bedre synlighet
+    nav ul li{
+        flex-wrap: wrap;
+        flex-direction: row;
     }
-}
+    
+    nav ul li a{
+        padding: 1.5rem 4.9rem;
+        font-size: 1rem;
+        width: auto;
+    }
 
-
-
-
-
+    main {
+        width: 1245px;
+        min-height: 400px;
+    }
+    
+    
+}  
