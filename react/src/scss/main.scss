@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
-// Variables for colors, fonts, etc.
 
 $dark: #2A324B;
 $light: #58699D;
@@ -7,8 +6,6 @@ $grey: #E1E5EE;
 $white: #ffffff;
 $font: 'Montserrat', sans-serif;
 
-@media only screen and (min-width: 1245px) {
-// General body styling
 body{
     display: grid;
     place-items: center;
@@ -18,7 +15,7 @@ body{
     background-color: #E1E5EE;
     font-family: 'Montserrat', sans-serif;
 }
-// Nav.scss
+
 nav {
     display: block;
     font-weight: 700;
@@ -44,7 +41,7 @@ nav {
         cursor: pointer;
         transition: background-color 0.3s ease;
 
-        &:hover {
+        &:focus {
             background-color: #ffffff;
             color: #58699D;
         }
@@ -54,7 +51,6 @@ nav {
 }
 
 
-// General Main styling
 
 main{
     background-color: $white;
@@ -77,5 +73,8 @@ main article ul{
     margin-top: 3;
 }   
 
+
+
+@media only screen and (min-width: 1245px) {
 
 }
