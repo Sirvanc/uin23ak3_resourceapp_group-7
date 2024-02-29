@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import Main from './components/Main';
 import Nav from './components/Nav';
-import "./scss/main.scss";
+import "./style/main.scss";
 
 
 
