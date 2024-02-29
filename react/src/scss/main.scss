@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
 // Variables for colors, fonts, etc.
+
 $dark: #2A324B;
 $light: #58699D;
 $grey: #E1E5EE;
 $white: #ffffff;
 $font: 'Montserrat', sans-serif;
 
+@media only screen and (min-width: 1245px) {
 // General body styling
 body{
     display: grid;
@@ -18,6 +20,12 @@ body{
 }
 // Nav.scss
 nav {
+    display: block;
+    font-weight: 700;
+    font-size: 1rem;
+    width: 100%;
+    margin-bottom: 1rem;
+
     ul {
     list-style: none;
     padding: 0;
@@ -26,16 +34,19 @@ nav {
     li {
         display: inline;
         margin-right: 10px;
+        margin-left: 10px;
+        
         button {
-        background-color: #007bff;
+        background-color:#2A324B;
         color: #fff;
         border: none;
-        padding: 5px 10px;
+        padding: 20px 100px;
         cursor: pointer;
         transition: background-color 0.3s ease;
 
         &:hover {
-            background-color: #0056b3;
+            background-color: #ffffff;
+            color: #58699D;
         }
         }
     }
@@ -43,7 +54,7 @@ nav {
 }
 
 
-
+// General Main styling
 
 main{
     background-color: $white;
@@ -66,30 +77,4 @@ main article ul{
 }   
 
 
-@media only screen and (min-width: 1245px)
-{
-    
-
-    nav ul{
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    nav ul li{
-        flex-wrap: wrap;
-        flex-direction: row;
-    }
-    
-    nav ul li a{
-        padding: 1.5rem 4.9rem;
-        font-size: 1rem;
-        width: auto;
-    }
-
-    main {
-        width: 1245px;
-        min-height: 400px;
-    }
-    
-    
-}  
+}
