@@ -1,32 +1,21 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { resources } from "../assets/ressurser.js";
+import React from "react";
 
-export default function Nav() {
-  const [activeTag, setActiveTag] = useState(null);
-
-  const uniqueTags = [];
-  resources.forEach((category) => {
-    if (uniqueTags.indexOf(category.category) === -1) {
-      uniqueTags.push(category.category);
-    }
-  });
-
+export default function Nav({ categories, onSelect }) {
   return (
-    <nav className="nav">
+    <nav>
       <ul>
-        {uniqueTags.map((tag) => (
-          <button
-            key={tag}
-            className={activeTag === tag ? "nav-button active" : "nav-button"}
-            onClick={() => setActiveTag(tag)}
-          >
-            <Link to={`/${tag}`} style={{ textTransform: "uppercase" }}>
-              {tag.toUpperCase()}
-            </Link>
-          </button>
+        {categories.map(category => (
+          <li key={category}>
+            <button onClick={() => onSelect(category)}>
+              {category.toUpperCase()}
+            </button>
+          </li>
         ))}
       </ul>
     </nav>
   );
 }
+
+/*Denne komponenten lager en enkel navigasjonsmeny med knapper for hver kategori som
+brukeren kan velge. Når en kategori blir valgt, kan en tilpasset funksjon bli kalt for å
+utføre relevante handlinger,for eksempel å oppdatere visningen av ressurser knyttet til den valgte kategorien.*/
