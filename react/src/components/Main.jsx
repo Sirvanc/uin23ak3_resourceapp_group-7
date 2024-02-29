@@ -3,13 +3,13 @@ import { resources } from "../assets/ressurser.js";
 
 export default function Main({ category }) {
     const filteredResources = resources.filter(resource => resource.category === category);
-    const uppercaseCategory = category.toUpperCase(); // Convert category to uppercase
+    const uppercaseCategory = category.toUpperCase(); // Konverter kategori til store bokstaver (uppercase)
 
     return (
         <main>
             <article>
                 <div>
-                    {/* Render the category name in uppercase */}
+                    {/* Rendre kategorinavnet med store bokstaver (uppercase) */}
                     <h2>Resources {uppercaseCategory}</h2>
                     
                     <ul>
