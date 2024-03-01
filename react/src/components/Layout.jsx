@@ -12,10 +12,10 @@ export default function Layout() {
   };
 
   return (
-    <div>
+    <>
       <Nav categories={categories} onSelect={handleCategorySelect} />
       <Main category={selectedCategory} />
-    </div>
+    </>
   );
 }
 /**Layout-komponenten binder sammen Nav og Main-komponentene og sørger for at 
