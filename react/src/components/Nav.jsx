@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { resources } from "../assets/ressurser.js";
+import { resources } from "../assets/reassures.js";
 
 export default function Nav() {
   const [activeTag, setActiveTag] = useState(null);
