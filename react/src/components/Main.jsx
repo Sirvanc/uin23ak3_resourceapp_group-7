@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { getResources } from './ressurser.js'; // Antar at getResources funksjonen eksisterer og returnerer en liste over ressurser
 
@@ -23,3 +24,16 @@ function Main(props) {
 }
 
 
+=======
+import React from "react";
+import { resources } from "../assets/reassures.js";
+
+export default function Main() {
+    return (
+        <div className='resourceBody'>
+            <h1>Ressursarkiv </h1>
+        </div>
+    
+    );
+}
+>>>>>>> parent of d68667d (oppdatert)
