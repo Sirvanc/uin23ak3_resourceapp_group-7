@@ -27,3 +27,6 @@ export default function Nav() {
   );
 }
 
+/*Denne komponenten lager en enkel navigasjonsmeny med knapper for hver kategori som
+brukeren kan velge. Når en kategori blir valgt, kan en tilpasset funksjon bli kalt for å
+utføre relevante handlinger,for eksempel å oppdatere visningen av ressurser knyttet til den valgte kategorien.*/
