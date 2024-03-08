@@ -1,30 +1,34 @@
 import React from "react";
 import { resources } from "../assets/ressurser.js";
 
+/**
+ * @param {string} category - the category of resources to display
+ * @returns {JSX.Element} - the main component
+ */
 export default function Main({ category }) {
-    const filteredResources = resources.filter(resource => resource.category === category);
-    const uppercaseCategory = category.toUpperCase(); // Konverter kategori til store bokstaver (uppercase)
+  const filteredResources = resources.filter(resource => resource.category === category);
+  const uppercaseCategory = category.toUpperCase(); // convert category to uppercase
 
-    return (
-        <main>
-            <article>
-                <div>
-                    {/* Rendre kategorinavnet med store bokstaver (uppercase) */}
-                    <h2>Resources {uppercaseCategory}</h2>
-                    
-                    <ul>
-                        {filteredResources.map(resource => (
-                            <li key={resource.id}>
-                                <a href={resource.url} target="_blank" rel="noopener noreferrer">
-                                    {resource.title}
-                                </a>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            </article>
-        </main>
-    );
+  return (
+    <main>
+      <article>
+        <div>
+          {/* render category name in uppercase */}
+          <h2>Resources {uppercaseCategory}</h2>
+
+          <ul>
+            {filteredResources.map(resource => (
+              <li key={resource.id}>
+                <a href={resource.url} target="_blank" rel="noopener noreferrer">
+                  {resource.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </article>
+    </main>
+  );
 }
 /** Funksjonen Main definerer React-komponent Main  som tar imot category som en prop.
  * Inni funksjonen filtreres ressursene basert på den gitte kategorien.
