@@ -1,21 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
+import { resources } from "../assets/ressurser.js";
 
-export default function Nav({ categories, onSelect }) {
+export default function Nav({ activeTag, setActiveTag }) {
+  const uniqueTags = [];
+
+  resources.forEach((category) => {
+    if (uniqueTags.indexOf(category.category) === -1) {
+      uniqueTags.push(category.category);
+    }
+  });
+
   return (
-    <nav>
+    <>
       <ul>
-        {categories.map(category => (
-          <li key={category}>
-            <button onClick={() => onSelect(category)}>
-              {category.toUpperCase()}
-            </button>
-          </li>
+        {uniqueTags.map((tag) => (
+          <button
+            key={tag}
+            className={activeTag === tag ? "active" : ""}
+            onClick={() => setActiveTag(tag)}
+          >
+            <p>{tag.toUpperCase()}</p>
+          </button>
         ))}
       </ul>
-    </nav>
+    </>
   );
 }
-
-/*Denne komponenten lager en enkel navigasjonsmeny med knapper for hver kategori som
-brukeren kan velge. Når en kategori blir valgt, kan en tilpasset funksjon bli kalt for å
-utføre relevante handlinger,for eksempel å oppdatere visningen av ressurser knyttet til den valgte kategorien.*/
