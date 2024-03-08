@@ -3,32 +3,12 @@ import Nav from "./Nav";
 import Main from "./Main";
 
 
-/**
- * @fileOverview Main component of the layout.
- * @author <NAME>
- */
-
-import React, { useState } from "react";
-
-/**
- * Main component of the layout.
- *
- * @param {object} props - properties of the component
- * @param {array} props.categories - list of categories
- * @param {function} props.onSelect - function to handle category selection
- */
-const Layout = (props) => {
-  const { categories, onSelect } = props;
+export default function Layout() {
+  const categories = ["html", "css", "javascript", "react", "headless-cms"];
   const [selectedCategory, setSelectedCategory] = useState(categories[0]);
 
-  /**
-   * Handle category selection.
-   *
-   * @param {string} category - selected category
-   */
-  const handleCategorySelect = (category) => {
+  const handleCategorySelect = category => {
     setSelectedCategory(category);
-    onSelect(category);
   };
 
   return (
@@ -37,9 +17,7 @@ const Layout = (props) => {
       <Main category={selectedCategory} />
     </div>
   );
-};
-
-export default Layout;
+}
 /**Layout-komponenten binder sammen Nav og Main-komponentene og sørger for at 
  * de kommuniserer ved å sende kategorivalg fra Nav til Main og 
  * oppdatere visningen basert på den valgte kategorien. 
