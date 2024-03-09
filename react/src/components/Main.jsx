@@ -1,11 +1,21 @@
 import React from "react";
+import { resources } from "../assets/reassures";
 
-export default function Main(props) {
-  const { activeTab } = props;
-  const uppercaseActiveTab = activeTab.toUpperCase();
+export default function Main({ activeTag }) {
+  const filteredResources = activeTag
+    ? resources.filter((resource) => resource.category === activeTag)
+    : resources;
+
   return (
     <>
-      <h1>{uppercaseActiveTab}</h1>
+      <div>
+        <h1>Resources</h1>
+        <ul>
+          {filteredResources.map((resource) => (
+            <li key={resource.id}>{resource.title}</li>
+          ))}
+        </ul>
+      </div>
     </>
   );
 }
