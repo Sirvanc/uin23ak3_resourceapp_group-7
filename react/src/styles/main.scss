@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+$colorWhite: #ffffff;
+$colorBlack: #000000;
+$colorDarkblue: #2A324B;
+$colorMediumblue: #58699D;
+$colorLightblue: #E1E5EE;
+
+$font: 'Roboto', Sans-serif;
+$fontSize: 20px;
+$maxWidth: 1500px;
+
+/* Background and metaproperties*/
+body {
+    background-color: $colorLightblue;
+    font-family: $font;
+    font-size: $fontSize;
+}
+
+/* Text properties*/
+p {
+    font-size: 1.4rem;
+    margin: 1rem;
+    color: $colorBlack;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 1rem;
+    color: $colorDarkblue;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: $colorDarkblue;
+}
+
+main a {
+    color: $colorMediumblue
+}
+
+nav button a {
+    color: $colorWhite;
+}
+
+nav button.active a {
+    color: $colorDarkblue;
+}
+
+nav button:hover a {
+    color: $colorDarkblue;
+}
+
+nav button {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* Main structure */
+#root {
+    width: 100vw;
+    height: 100vh;
+}
+
+#container {
+    width: 100%;
+    max-width: $maxWidth;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+}
+
+/* Nav */
+nav ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0;
+}
+
+nav ul li {
+    display: flex;
+    flex-grow: 1;
+}
+
+nav button {
+    background-color: $colorDarkblue;
+    text-align: center;
+    flex-basis: auto;
+    flex-grow: 1;
+    padding: 1rem;
+    color: $colorWhite;
+    text-decoration: none;
+    cursor: pointer;
+    border-style: none;
+    border-radius: 8px 8px 0px 0px;
+}
+
+nav button:hover {
+    color: $colorDarkblue;
+    background-color: $colorWhite;
+}
+
+nav button.active {
+    color: $colorDarkblue;
+    background-color: $colorWhite;
+}
+
+/* main */
+main {
+    background-color: $colorWhite;
+    padding: 4rem;
+}
+
+main ul {
+    margin-left: 2rem;
+}
+
+@media only screen and (min-width: 1012px) {
+    nav ul {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin: 0;
+    }
+
+    nav button {
+        flex-grow: 1;
+        padding: 2rem 2rem;
+    }
+}
