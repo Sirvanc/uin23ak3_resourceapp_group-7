@@ -19,7 +19,7 @@ export default function Nav({ activeTag, setActiveTag }) {
             className={activeTag === tag ? "active" : ""}
             onClick={() => setActiveTag(tag)}
           >
-            <p>{tag.toUpperCase()}</p>
+            <p>{tag}</p>
           </button>
         ))}
       </ul>

@@ -4,7 +4,6 @@ import Nav from "./Nav";
 
 export default function Layout({ children }) {
   const [activeTag, setActiveTag] = useState("html");
-  console.log("layout", activeTag);
 
   return (
     <>
