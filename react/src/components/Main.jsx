@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom"; // Add this import statement
+import { useParams } from "react-router-dom"; 
 import { resources } from "../assets/ressurser.js";
 
 export default function Resources(props) {
@@ -8,17 +8,6 @@ export default function Resources(props) {
 
   const { slug } = useParams();
   const [resource, setResource] = useState();
-
-  /*   useEffect(() => {
-    console.log("1", resources);
-    console.log("Current slug:", slug);
-    if (resources && category) {
-      const filteredResource = resources.find((res) =>
-        res.category.toLowerCase().includes(category.toLowerCase())
-      );
-      setResource(filteredResource || {});
-    }
-  }, [resources, category]); */
 
   return (
     <section>
