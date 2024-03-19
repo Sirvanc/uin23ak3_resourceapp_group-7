@@ -53,13 +53,13 @@ nav {
             height: 2rem;
             padding: 2rem;
             
-        
-            &:focus{
-                background-color: $white;
-                color: $darkblue;
-            }
         }
-        
+
+        .active {
+            background-color: $white;
+            color: $darkblue;
+        }
+         
     }
 }
 
