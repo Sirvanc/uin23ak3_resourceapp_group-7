@@ -8,30 +8,13 @@ function App() {
   return (
     <Layout>
       <Routes>
+        <Route path="/html" element={<Section resources={resources} />} />
+        <Route path="/css" element={<Section resources={resources} />} />
+        <Route path="/javaScript" element={<Section resources={resources} />} />
+        <Route path="/react" element={<Section resources={resources} />} />
         <Route
-          path="/html"
-          element={<Section resources={resources} category={"html"} />}
-        />
-        <Route
-          path="/css"
-          element={<Section resources={resources} category={"css"} />}
-        />
-        <Route
-          path="/javaScript"
-          element={<Section resources={resources} category={"JavaScript"} />}
-        />
-        <Route
-          path="/react"
-          element={<Section resources={resources} category={"React"} />}
-        />
-        <Route
-          path="/sanity-and-headless-CMS"
-          element={
-            <Section
-              resources={resources}
-              category={"Sanity and headless CMS"}
-            />
-          }
+          path="/headless-CMS"
+          element={<Section resources={resources} />}
         />
       </Routes>
     </Layout>
