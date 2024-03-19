@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { Navigate } from 'react-router-dom';
-import { resources } from './assets/ressurser'
+import { resources } from "../assets/ressurser.js";
 import Resources from './components/Resources';
 import Layout from './components/Layout';
 
