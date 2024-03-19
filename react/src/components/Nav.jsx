@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { resources } from "../assets/ressurser.js";
+import { Link } from "react-router-dom";
 
 export default function Nav({ activeTag, setActiveTag }) {
   const uniqueTags = [];
@@ -15,13 +16,14 @@ export default function Nav({ activeTag, setActiveTag }) {
       <nav>
         <ul>
           {uniqueTags.map((tag) => (
-            <button
+            <Link
+              to={`/${tag}`}
               key={tag}
               className={activeTag === tag ? "active" : ""}
               onClick={() => setActiveTag(tag)}
             >
               <p>{tag}</p>
-            </button>
+            </Link>
           ))}
         </ul>
       </nav>

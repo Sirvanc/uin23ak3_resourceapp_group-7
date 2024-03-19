@@ -1,7 +1,11 @@
+import { useParams } from "react-router-dom";
 import { resources } from "../assets/ressurser.js";
 
 export default function Resources(props) {
   const { activeTab } = props;
+  const { slug } = useParams();
+
+  console.log(slug, activeTab);
 
   return (
     <section>
