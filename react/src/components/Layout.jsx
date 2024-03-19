@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Main from "./Main";
+import Section from "./Section";
 import Nav from "./Nav";
 
 export default function Layout({ children }) {
@@ -8,7 +8,7 @@ export default function Layout({ children }) {
   return (
     <>
       <Nav activeTag={activeTag} setActiveTag={setActiveTag} />
-      <Main activeTab={activeTag}>{children}</Main>
+      <Section activeTab={activeTag}>{children}</Section>
     </>
   );
 }
