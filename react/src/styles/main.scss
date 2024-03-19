@@ -81,7 +81,7 @@ section {
 
 }
 
- @media only screen and (min-width: 1250px) {
+ @media only screen and (min-width: 1000px) {
 
 
     nav {
@@ -96,12 +96,11 @@ section {
             padding: 0;
             margin: 0;
             width: 100%;
-            max-width: 1245px;
             gap: 1rem;
         
             button {
                 flex-direction: row;
-                font-size: 1rem;
+                font-size: 0.85rem;
                 width: auto;
                 margin-bottom: 0;
                 width: 230px;
@@ -110,8 +109,8 @@ section {
     }
 
     section {
-        max-width: 1245px;
-        min-height: 550px;
+        max-width: 1000px;
+        min-height: 400px;
         padding: 4rem;
         margin-top: 0;
     }   
