@@ -1,28 +1,26 @@
-/**Importsetninger */
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
+import { resources } from './assets/ressurser'
+import Resources from './components/Resources';
 import Layout from './components/Layout';
-import Main from './components/Main';
-import Nav from './components/Nav';
-import "./style/main.scss";
 
+function App() { 
 
-
-function App() {
-  return (
-    <Router>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Nav />} />
-          <Route path="/:category" element={<Main />} />
-        </Routes>
-      </Layout>
-    </Router>
+  return ( 
+    <Layout>
+      <Routes>
+        
+        <Route path='/' element={<Navigate to='/HTML' />} /> 
+        <Route path='/HTML' element={<Resources resources={resources} category={"html"} />} />
+        <Route path='/CSS' element={<Resources resources={resources} category={"css"} />} />
+        <Route path='/JavaScript' element={<Resources resources={resources} category={"JavaScript"} />} />
+        <Route path='/React' element={<Resources resources={resources} category={"React"} />} />
+        <Route path='/Sanity-and-headless-CMS' element={<Resources resources={resources} category={"Sanity and headless CMS"} />} />
+        
+      </Routes>
+    </Layout>
   );
 }
 
 export default App;
-
-/**Samlet sett setter denne koden opp en React-applikasjon med ruting ved hjelp 
- * av React Router. Den har en layout-komponent som inneholder navigasjon og hovedinnhold, 
- * og den bruker parametrisert ruting for å vise forskjellig innhold basert på den valgte kategorien. */

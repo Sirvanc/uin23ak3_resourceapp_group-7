@@ -1,21 +1,28 @@
-import React from "react";
-import { resources } from "../assets/reassures";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom"; 
+import { resources } from "../assets/ressurser.js";
 
-export default function Main({ activeTag }) {
-  const filteredResources = activeTag
-    ? resources.filter((resource) => resource.category === activeTag)
-    : resources;
+export default function Resources(props) {
+  const { activeTab, category } = props;
+  console.log("main", activeTab, category);
+
+  const { slug } = useParams();
+  const [resource, setResource] = useState();
+
+
 
   return (
-    <>
-      <div>
-        <h1>Resources</h1>
-        <ul>
-          {filteredResources.map((resource) => (
-            <li key={resource.id}>{resource.title}</li>
+    <section>
+      <h2>{activeTab}</h2>
+      <ul>
+        {resources
+          .filter((source) => source.category === activeTab)
+          .map((source, index) => (
+            <li key={index}>
+              <a href={source.url}>{source.title}</a>
+            </li>
           ))}
-        </ul>
-      </div>
-    </>
+      </ul>
+    </section>
   );
 }

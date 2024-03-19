@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { resources } from "../assets/reassures";
+import { resources } from "../assets/ressurser.js";
 
 export default function Nav({ activeTag, setActiveTag }) {
   const uniqueTags = [];
@@ -12,17 +12,19 @@ export default function Nav({ activeTag, setActiveTag }) {
 
   return (
     <>
-      <ul>
-        {uniqueTags.map((tag) => (
-          <button
-            key={tag}
-            className={activeTag === tag ? "active" : ""}
-            onClick={() => setActiveTag(tag)}
-          >
-            <p>{tag.toUpperCase()}</p>
-          </button>
-        ))}
-      </ul>
+      <nav>
+        <ul>
+          {uniqueTags.map((tag) => (
+            <button
+              key={tag}
+              className={activeTag === tag ? "active" : ""}
+              onClick={() => setActiveTag(tag)}
+            >
+              <p>{tag}</p>
+            </button>
+          ))}
+        </ul>
+      </nav>
     </>
   );
 }
