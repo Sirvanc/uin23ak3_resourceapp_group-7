@@ -1,13 +1,14 @@
-import Main from "./Main"
-import Nav from "./Nav"
+import React, { useState } from "react";
+import Section from "./Section";
+import Nav from "./Nav";
 
-export default function Layout({}) {
-    return (
-    <>    
-      <Nav />
+export default function Layout({ children }) {
+  const [activeTag, setActiveTag] = useState("html");
 
-      <Main />    
-      
+  return (
+    <>
+      <Nav activeTag={activeTag} setActiveTag={setActiveTag} />
+      <Section activeTab={activeTag}>{children}</Section>
     </>
-    )
+  );
 }
