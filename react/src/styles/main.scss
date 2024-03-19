@@ -38,7 +38,7 @@ nav {
         padding: 1rem;
         margin: 0;
         
-        button {
+        a {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -98,7 +98,7 @@ section {
             width: 100%;
             gap: 1rem;
         
-            button {
+            a {
                 flex-direction: row;
                 font-size: 0.85rem;
                 width: auto;
